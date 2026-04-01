@@ -1,6 +1,7 @@
 import './App.css'
 import Banner from './component/banner/Banner'
 import Bottom from './component/Bottom/Bottom'
+import Footer from './component/footer/Footer'
 import Navbar from './component/navbar/Navbar'
 import Pricing from './component/pricing/Pricing'
 import Services from './component/services/Services'
@@ -18,6 +19,7 @@ const App = () => {
       <Steps />
       <Pricing />
       <Bottom />
+      <Footer />
     </div>
   )
 }
