@@ -32,25 +32,25 @@ const Navbar = () => {
             <li><a>FAQ</a></li>
           </ul>
         </div>
-<div className="navbar-end flex gap-4 font-bold">
-  
-  <div className="relative">
-    <LuShoppingCart className="text-2xl" />
-    
-    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
-      0
-    </span>
-  </div>
+        <div className="navbar-end flex gap-4 font-bold">
 
-  <p>Login</p>
+          <div className="relative">
+            <LuShoppingCart className="text-2xl" />
 
-  <a className="btn rounded-2xl text-white bg-gradient-to-r from-indigo-600 to-purple-500">
-    Get Started
-  </a>
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+              0
+            </span>
+          </div>
 
-</div>
+          <p>Login</p>
 
- 
+          <a className="btn rounded-2xl text-white bg-gradient-to-r from-indigo-600 to-purple-500">
+            Get Started
+          </a>
+
+        </div>
+
+
         {/* <div className="navbar-end flex gap-4 font-bold">
   
   <div className="relative">

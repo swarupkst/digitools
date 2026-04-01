@@ -12,7 +12,7 @@
       "Grammar checker"
     ],
     "button_text": "Buy Now",
-    "image": "assets/products/ai-writing-pro.png"
+    "image": "https://i.ibb.co.com/tpd3myqw/writing-2327400-1.png"
   },
   {
     "id": 2,
@@ -27,7 +27,7 @@
       "Commercial license"
     ],
     "button_text": "Buy Now",
-    "image": "assets/products/design-templates-pack.png"
+    "image": "https://i.ibb.co.com/rf1sr2XT/design-tool.png"
   },
   {
     "id": 3,
@@ -42,7 +42,7 @@
       "No attribution"
     ],
     "button_text": "Buy Now",
-    "image": "assets/products/premium-stock-assets.png"
+    "image": "https://i.ibb.co.com/d4YFSR04/camera-8775444-1.png"
   },
   {
     "id": 4,
@@ -57,7 +57,7 @@
       "Custom workflows"
     ],
     "button_text": "Buy Now",
-    "image": "assets/products/automation-toolkit.png"
+    "image": "https://i.ibb.co.com/WNnqgL3G/operation.png"
   },
   {
     "id": 5,
@@ -72,7 +72,7 @@
       "Export to PDF"
     ],
     "button_text": "Buy Now",
-    "image": "assets/products/resume-builder-pro.png"
+    "image": "https://i.ibb.co.com/ch3vFh9K/portfolio.png"
   },
   {
     "id": 6,
@@ -87,6 +87,6 @@
       "Analytics dashboard"
     ],
     "button_text": "Buy Now",
-    "image": "assets/products/social-media-content-kit.png"
+    "image": "https://i.ibb.co.com/8n3dX7hT/social-media.png"
   }
 ]
