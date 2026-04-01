@@ -5,7 +5,7 @@ const Card = () => {
   return (
     <div className="flex justify-center">
       
-      <div className="w-90 p-5 border rounded-2xl shadow-md relative bg-white">
+      <div className="w-90 p-5 border border-gray-300 rounded-2xl shadow-md relative bg-white">
         
         {/* Top Right Badge */}
         <p className="absolute top-3 right-3 bg-purple-500 text-white text-xs px-3 py-1 rounded-full">

@@ -8,9 +8,9 @@ const ProductCartToggle = () => {
       
       <button
         onClick={() => setActive("products")}
-        className={`px-5 py-2 rounded-full font-semibold transition-all duration-300 ${
+        className={`px-5 py-2 rounded-full font-semibold transition-all duration-300 cursor-pointer ${
           active === "products"
-            ? "bg-gradient-to-r from-indigo-600 to-purple-500 text-white"
+            ? "bg-gradient-to-r from-indigo-600 to-purple-500 text-white cursor-pointer"
             : "text-indigo-600"
         }`}
       >
@@ -19,9 +19,9 @@ const ProductCartToggle = () => {
 
       <button
         onClick={() => setActive("cart")}
-        className={`px-5 py-2 rounded-full font-semibold transition-all duration-300 ${
+        className={`px-5 py-2 rounded-full font-semibold transition-all duration-300 cursor-pointer ${
           active === "cart"
-            ? "bg-gradient-to-r from-indigo-600 to-purple-500 text-white"
+            ? "bg-gradient-to-r from-indigo-600 to-purple-500 text-white cursor-pointer"
             : "text-indigo-600"
         }`}
       >
