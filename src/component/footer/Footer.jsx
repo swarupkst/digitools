@@ -17,6 +17,7 @@ const Footer = () => {
         lg:grid-cols-6 
         gap-8
         text-center 
+        sm:text-left
         pt-30 pb-20
       ">
         

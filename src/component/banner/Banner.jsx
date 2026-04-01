@@ -8,7 +8,9 @@ const Banner = () => {
       <div className='flex gap-[60px] justify-between w-11/12 xl:w-8/12 lg:w-10/12 mx-auto py-[60px]  items-center'>
         
         <BannerLeft />
-        <RightBanner />
+        <div className="hidden lg:block">
+  <RightBanner />
+</div>
 
       </div>
 

@@ -12,7 +12,7 @@ const BannerLeft = () => {
   </p>
 </div>
 
-<h2 className='text-6xl font-extrabold pt-4'>Supercharge Your <br/> Digital Workflow</h2>
+<h2 className='text-4xl text-center sm:text-left lg:text-5xl sm:text-6xl font-extrabold pt-4'>Supercharge Your <br/> Digital Workflow</h2>
 <p className='text-xl text-[#627382] pt-4'>Access premium AI tools, design assets, templates, and productivity
 software—all in one place. Start creating faster today. Explore Products
 </p>

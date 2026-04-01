@@ -1,29 +1,29 @@
-import React from 'react'
+const Enterprise = () => {
+  return (
+    <div className="w-full p-6 rounded-2xl shadow-lg bg-gray-100 text-gray-800 relative">
 
-const Starter = () => {
-    return (
-        <div className="w-full max-w-sm p-6 rounded-2xl shadow-sm bg-gray-100 text-gray-800 relative">
+      <h2 className='text-2xl sm:text-3xl font-bold mb-2'>Enterprise</h2>
+      <p className='text-gray-500 mb-4 text-sm sm:text-base'>For teams and businesses</p>
 
-            <h2 className='text-3xl font-bold mb-2'>Starter</h2>
-            <p className='text-gray-500 mb-4'>Perfect for getting started</p>
+      <h3 className='text-xl sm:text-2xl font-bold mb-4'>
+        $99 <span className='text-sm font-normal text-gray-500'>/Month</span>
+      </h3>
 
-            <h3 className='text-2xl font-bold mb-4'>
-                $0 <span className='text-sm font-normal text-gray-500'>/Month</span>
-            </h3>
+      <div className="space-y-2 text-gray-600 text-sm sm:text-base">
+        <p><span className="text-green-500 font-bold">✔</span> Everything in Pro</p>
+        <p><span className="text-green-500 font-bold">✔</span> Team collaboration</p>
+        <p><span className="text-green-500 font-bold">✔</span> Custom integrations</p>
+        <p><span className="text-green-500 font-bold">✔</span> Dedicated support</p>
+        <p><span className="text-green-500 font-bold">✔</span> SLA guarantee</p>
+        <p><span className="text-green-500 font-bold">✔</span> Custom branding</p>
+      </div>
 
-            <div className="space-y-2 text-gray-600">
-                <p><span className="text-green-500 font-bold">✔</span> Access to 10 free tools</p>
-                <p><span className="text-green-500 font-bold">✔</span> Basic templates</p>
-                <p><span className="text-green-500 font-bold">✔</span> Community support</p>
-                <p><span className="text-green-500 font-bold">✔</span> 1 project per month</p>
-            </div>
+      <button className="mt-6 w-full py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-500 text-white font-bold hover:opacity-90 transition">
+        Contact Sales
+      </button>
 
-            <button className="mt-6 w-full py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-500 text-white font-bold hover:opacity-90 transition">
-                Get Started
-            </button>
-
-        </div>
-    )
+    </div>
+  )
 }
 
-export default Starter
+export default Enterprise
