@@ -18,7 +18,7 @@ const Starter = () => {
         <br />
       </div>
 
-      <button className="mt-8 w-full py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-500 text-white font-bold hover:opacity-90 transition">
+      <button className="mt-8 w-full py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-500 text-white font-bold hover:opacity-90 transition cursor-pointer">
         Get Started Free
       </button>
 
