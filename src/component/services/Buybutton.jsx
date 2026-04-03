@@ -1,6 +1,13 @@
 import React, { useState } from 'react'
 
-const Buybutton = ({item}) => {
+const Buybutton = ({ item, cart, setCart }) => {
+
+  const handleBuybutton = () => {
+    Selected(true);
+    setCart([...cart, item]);
+  };
+
+
       const [isSelect, Selected] = useState (false)
       let tagColor = "";
 
@@ -13,6 +20,8 @@ const Buybutton = ({item}) => {
         } else {
           tagColor = "bg-purple-500 text-white";
         }
+
+        
   return (
     <div>
                 <div 
@@ -53,7 +62,7 @@ const Buybutton = ({item}) => {
               ))}
             </ul>
 
-            <button className="w-full px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-500 text-white text-sm sm:text-base font-semibold cursor-pointer" onClick={()=>Selected(true)}>
+            <button className="w-full px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-500 text-white text-sm sm:text-base font-semibold cursor-pointer" onClick={handleBuybutton}>
               {isSelect === true ? "Added to Cart" : "Buy Now"}
               
             </button>

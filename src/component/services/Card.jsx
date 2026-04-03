@@ -1,15 +1,19 @@
 import Buybutton from './Buybutton';
 
-const Card = ({ Costlist }) => {
+const Card = ({ Costlist, carts, setCarts }) => {
+     console.log (carts)
 
   return (
+    
     <>
       {Costlist.map((item, index) => {
 
-        
+
 
         return (
-          <Buybutton item={item}/>
+          <Buybutton key={item.id} item={item} cart={carts} setCart={setCarts}/>
+
+          
         )
       })}
     </>

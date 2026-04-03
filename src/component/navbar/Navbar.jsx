@@ -1,9 +1,11 @@
 import React from 'react'
 import { LuShoppingCart } from "react-icons/lu";
 
-const Navbar = () => {
+const Navbar = ({ carts = [] }) => {
   return (
     <div>
+      {carts.map(items => (
+        <div key={items.id}> </div> ))}
 
       <div className="navbar bg-base-100 max-w-7xl  mx-auto">
         <div className="navbar-start">
@@ -38,7 +40,7 @@ const Navbar = () => {
             <LuShoppingCart className="text-2xl" />
 
             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
-              0
+              {carts.length}
             </span>
           </div>
 

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
+import Cart from "./Cart";
 
-const ProductCartToggle = () => {
+const ProductCartToggle = ({carts, setCarts}) => {
   const [Costlist, setCostlist] = useState([]);
   const [active, setActive] = useState("products");
+  //const [cart, setCart] = useState([]);
 
   useEffect(() => {
     fetch("data.json")
@@ -13,6 +15,7 @@ const ProductCartToggle = () => {
 
   return (
     <div>
+
     <div className="flex justify-center items-center">
       <div className="inline-flex border-2 border-gray-300 rounded-full p-1 items-center">
         
@@ -36,13 +39,13 @@ const ProductCartToggle = () => {
               : "text-indigo-600"
           }`}
         >
-          Cart (0)
+          Cart ({carts.length})
         </button>
         </div>
       </div>
           {active === "products" ? <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 pt-10 gap-6 sm:gap-8">
-        <Card Costlist={Costlist} />
-      </div> : <h2>Not</h2>}
+        <Card Costlist={Costlist} carts={carts} setCarts={setCarts} />
+      </div> : <div> <Cart carts={carts} /> </div>}
       
     
     </div>
