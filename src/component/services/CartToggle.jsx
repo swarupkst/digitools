@@ -45,7 +45,7 @@ const ProductCartToggle = ({carts, setCarts}) => {
       </div>
           {active === "products" ? <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 pt-10 gap-6 sm:gap-8">
         <Card Costlist={Costlist} carts={carts} setCarts={setCarts} />
-      </div> : <div> <Cart carts={carts} /> </div>}
+      </div> : <div className="grid grid-cols-1 w-full"> <Cart carts={carts} setCarts={setCarts} /> </div>}
       
     
     </div>

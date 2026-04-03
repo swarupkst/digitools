@@ -1,44 +1,90 @@
 import React from 'react'
+import { MdDelete } from "react-icons/md";
+import { BsCart2 } from "react-icons/bs";
 
-const Cart = ({ carts }) => {
-  console.log(carts.length)
 
+const Cart = ({ carts, setCarts }) => {
+  const handleRemove = (id) => {
+  const updatedCart = carts.filter(item => item.id !== id);
+  
+  setCarts(updatedCart);
+};
+const totalPrice = carts.reduce((acc, item) => acc + item.price, 0);
   return (
-    <div>
-      <h1 className='text-3xl font-bold text-left'>Your Cart</h1>
+    <div className="max-w-8xl mx-auto px-4 mt-10 border border-gray-400 p-8 rounded-2xl">
+      <h1 className='text-4xl font-bold mb-8'>Your Cart</h1>
 
-      {carts.map(items => (
-        <div key={items.id} className="bg-[#F9FAFC] rounded-2xl p-6 mb-6 border border-gray-200">
-  <div className="flex items-center gap-6">
+      {/* ✅ Empty state */}
+      {carts.length === 0 ? (
+  <div className="w-full flex flex-col items-center justify-center h-[30vh] text-center text-gray-500 px-4">
+  
+  <BsCart2 className="text-6xl sm:text-7xl md:text-8xl mb-6" />
 
-    {/* LEFT: Image */}
-    <img
-      src={items.image}
-      alt={items.title}
-      className="w-28 h-28 object-cover rounded-xl"
-    />
+  <p className="text-xl sm:text-2xl md:text-3xl font-semibold">
+    Cart is Empty
+  </p>
 
-    {/* MIDDLE: Title + Price */}
-    <div className="flex-1">
-      <p className="text-2xl font-semibold text-gray-800">
-        {items.title}
-      </p>
-      <p className="text-lg text-gray-500 mt-2">
-        ${items.price}
-      </p>
-    </div>
+  <p className="text-sm sm:text-base md:text-lg mt-3 text-gray-400 max-w-md">
+    Add some products to your cart and they will appear here.
+  </p>
 
-    {/* RIGHT: Remove Button */}
-    <button className="text-red-500 text-lg font-medium border border-red-300 px-4 py-2 rounded-lg hover:bg-red-500 hover:text-white transition">
-      Remove
-    </button>
-
-  </div>
 </div>
-      ))}
-      
+      ) : (
+        <>
+          {carts.map(items => (
+            <div
+              key={items.id}
+              className="bg-[#F9FAFC] rounded-2xl p-4 mb-4 border border-gray-200 shadow-sm hover:shadow-md transition"
+            >
+              <div className="flex items-center gap-8 sm:gap-10">
+
+                {/* LEFT: Image */}
+                <img
+                  src={items.image}
+                  alt={items.title}
+                  className="w-8 h-auto object-cover rounded-xl"
+                />
+
+                {/* MIDDLE */}
+                <div className="flex-1">
+                  <p className="text-sm ms:text-2xl font-semibold text-gray-800">
+                    {items.title}
+                  </p>
+
+                  <p className="text-xl text-gray-500 mt-3">
+                    ${items.price}
+                  </p>
+                </div>
+
+                {/* RIGHT: Buttons */}
+                <button onClick={() => handleRemove(items.id)} className="hidden sm:block text-red-500 border border-red-300 px-6 py-3 rounded-xl hover:bg-red-500 hover:text-white transition">
+                  Remove
+                </button>
+
+                <button
+                  onClick={() => handleRemove(items.id)} className="block sm:hidden text-red-500 text-2xl"
+                >
+                  <MdDelete />
+                </button>
+
+              </div>
+            </div>
+          ))}
+
+          <div className='flex justify-between'>
+            <p>Total:</p> <p className='text-xl font-bold px-2 py-2'>${totalPrice}</p>
+          </div>
+
+          <button
+            onClick={() => setCarts([])}
+            className='w-full px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-500 text-white text-sm sm:text-base font-semibold cursor-pointer'
+          >
+            Proceed to Checkout
+          </button>
+        </>
+      )}
     </div>
-  )
-}
+  );
+};
 
 export default Cart

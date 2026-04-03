@@ -19,7 +19,7 @@ const App = () => {
   const [carts, setCarts] = useState ([])
 
   return (
-    <div>
+    <div className="pt-20">
       <Navbar carts={carts}/>
       <Banner />
       <Stack />

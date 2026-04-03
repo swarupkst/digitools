@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
-
-const Buybutton = ({ item, cart, setCart }) => {
+const Buybutton = ({ item, cart, setCart, selectedId, setSelectedId }) => {
 
   const handleBuybutton = () => {
-    Selected(true);
+    setSelectedId(item.id);   // 🔥 ekta select korle baki gula auto unselect
     setCart([...cart, item]);
   };
 
 
-      const [isSelect, Selected] = useState (false)
+      const isSelect = selectedId === item.id;
       let tagColor = "";
 
         if (item.tag === "Best Seller") {
@@ -26,8 +25,7 @@ const Buybutton = ({ item, cart, setCart }) => {
     <div>
                 <div 
            
-            className="w-full p-4 sm:p-5 border border-gray-300 rounded-2xl shadow-md relative bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          >
+            className="w-full p-4 sm:p-5 border border-gray-300 rounded-2xl shadow-md relative bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 
             <p className={`absolute top-3 right-3 text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-full ${tagColor}`}>
               {item.tag}

@@ -3,11 +3,11 @@ import { LuShoppingCart } from "react-icons/lu";
 
 const Navbar = ({ carts = [] }) => {
   return (
-    <div>
+    <div className="fixed top-0 left-0 w-full z-50 bg-base-100">
       {carts.map(items => (
         <div key={items.id}> </div> ))}
 
-      <div className="navbar bg-base-100 max-w-7xl  mx-auto">
+      <div className=" navbar bg-base-100 max-w-7xl  mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -23,7 +23,7 @@ const Navbar = ({ carts = [] }) => {
               <li><a>FAQ</a></li>
             </ul>
           </div>
-          <a className="text-xl md:text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-500 bg-clip-text text-transparent">DigiTools</a>
+          <a className="text-xl md:text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-500 bg-clip-text text-transparent cursor-pointer">DigiTools</a>
         </div>
         <div className="navbar-center hidden lg:flex lg:gap-8">
           <ul className="menu menu-horizontal px-1 font-semibold text-xl">
@@ -37,14 +37,14 @@ const Navbar = ({ carts = [] }) => {
         <div className="navbar-end flex gap-4 font-bold">
 
           <div className="relative">
-            <LuShoppingCart className="text-2xl" />
+            <LuShoppingCart className="text-2xl cursor-pointer" />
 
             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
               {carts.length}
             </span>
           </div>
 
-          <p>Login</p>
+          <p className='cursor-pointer'>Login</p>
 
           <a className="btn rounded-2xl text-white bg-gradient-to-r from-indigo-600 to-purple-500">
             Get Started
