@@ -1,10 +1,17 @@
 import React, { useState } from 'react'
+import { toast } from 'react-toastify';
 const Buybutton = ({ item, cart, setCart, selectedId, setSelectedId }) => {
 
   const handleBuybutton = () => {
-    setSelectedId(item.id);   // 🔥 ekta select korle baki gula auto unselect
-    setCart([...cart, item]);
-  };
+  const alreadyExists = cart.some(c => c.id === item.id);
+   toast.success("Added to Cart")
+  if (alreadyExists) {
+    return; // ❌ already added → do nothing
+  }
+
+  setSelectedId(item.id);
+  setCart([...cart, item]);
+};
 
 
       const isSelect = selectedId === item.id;
@@ -20,7 +27,7 @@ const Buybutton = ({ item, cart, setCart, selectedId, setSelectedId }) => {
           tagColor = "bg-purple-500 text-white";
         }
 
-        
+        const isAdded = cart.some(c => c.id === item.id);
   return (
     <div>
                 <div 
@@ -60,10 +67,17 @@ const Buybutton = ({ item, cart, setCart, selectedId, setSelectedId }) => {
               ))}
             </ul>
 
-            <button className="w-full px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-500 text-white text-sm sm:text-base font-semibold cursor-pointer" onClick={handleBuybutton}>
-              {isSelect === true ? "Added to Cart" : "Buy Now"}
-              
-            </button>
+            <button
+  disabled={isAdded}
+  className={`w-full px-4 py-2 rounded-xl text-white text-sm sm:text-base font-semibold cursor-pointer 
+  ${isAdded 
+    ? "bg-green-700 cursor-not-allowed" 
+    : "bg-gradient-to-r from-indigo-600 to-purple-500"
+  }`}
+  onClick={handleBuybutton}
+>
+  {isAdded ? "Added to Cart" : "Buy Now"}
+</button>
 
           </div>
     </div>

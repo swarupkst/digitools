@@ -7,6 +7,8 @@ import Pricing from './component/pricing/Pricing'
 import Services from './component/services/Services'
 import Stack from './component/stack/Stack'
 import Steps from './component/steps/steps'
+import { ToastContainer, toast } from 'react-toastify';
+
 import { Suspense, useState } from 'react';
 
 const fetchCost = async ()=> {
@@ -30,6 +32,7 @@ const App = () => {
       <Pricing />
       <Bottom />
       <Footer />
+      <ToastContainer />
 
             
     </div>

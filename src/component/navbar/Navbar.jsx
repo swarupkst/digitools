@@ -5,7 +5,7 @@ const Navbar = ({ carts = [] }) => {
   return (
     <div className="fixed top-0 left-0 w-full z-50 bg-base-100">
       {carts.map(items => (
-        <div key={items.id}> </div> ))}
+        <div key={items.id}> </div>))}
 
       <div className=" navbar bg-base-100 max-w-7xl  mx-auto">
         <div className="navbar-start">
@@ -39,9 +39,11 @@ const Navbar = ({ carts = [] }) => {
           <div className="relative">
             <LuShoppingCart className="text-2xl cursor-pointer" />
 
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
-              {carts.length}
-            </span>
+            {carts.length > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                {carts.length}
+              </span>
+            )}
           </div>
 
           <p className='cursor-pointer'>Login</p>

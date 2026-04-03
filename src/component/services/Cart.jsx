@@ -1,22 +1,22 @@
 import React from 'react'
 import { MdDelete } from "react-icons/md";
 import { BsCart2 } from "react-icons/bs";
+import { toast } from 'react-toastify';
 
 
 const Cart = ({ carts, setCarts }) => {
   const handleRemove = (id) => {
   const updatedCart = carts.filter(item => item.id !== id);
-  
+  toast.warn ("Cart Removed")
   setCarts(updatedCart);
 };
 const totalPrice = carts.reduce((acc, item) => acc + item.price, 0);
   return (
-    <div className="max-w-8xl mx-auto px-4 mt-10 border border-gray-400 p-8 rounded-2xl">
+    <div className="w-full max-w-5xl mx-auto px-4 mt-10 border border-gray-300 p-6 sm:p-8 rounded-2xl min-w-[42vh] xl:min-w-[70vh] sm:min-w-[60vh]">
       <h1 className='text-4xl font-bold mb-8'>Your Cart</h1>
 
-      {/* ✅ Empty state */}
       {carts.length === 0 ? (
-  <div className="w-full flex flex-col items-center justify-center h-[30vh] text-center text-gray-500 px-4">
+  <div className="w-full max-w-5xl flex flex-col items-center justify-center h-[30vh] text-center text-gray-500 px-4">
   
   <BsCart2 className="text-6xl sm:text-7xl md:text-8xl mb-6" />
 
@@ -76,7 +76,12 @@ const totalPrice = carts.reduce((acc, item) => acc + item.price, 0);
           </div>
 
           <button
-            onClick={() => setCarts([])}
+          
+            onClick={() => {
+    toast.error("All Cart Removed");
+    setCarts([]);
+  }}
+            
             className='w-full px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-500 text-white text-sm sm:text-base font-semibold cursor-pointer'
           >
             Proceed to Checkout
