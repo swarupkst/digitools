@@ -1,16 +1,67 @@
-# React + Vite
+# 🌐 DigiTools — All-in-One Utility Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Overview
 
-Currently, two official plugins are available:
+**DigiTools** is a modern, scalable web application that brings together a collection of essential digital tools into a single, intuitive platform. The project focuses on performance, clean UI/UX, and modular architecture, making it both user-friendly and developer-friendly.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project demonstrates strong frontend development skills, including component-based architecture, state management, and responsive design principles.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+🔗 https://digitoolsbyswarup.netlify.app/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend:** React.js
+* **Styling:** Tailwind CSS
+* **Language:** JavaScript (ES6+)
+* **Fetching data:** API Integration
+* **Deployment:** Netlify
+* **Version Control:** Git & GitHub
+
+---
+
+## ✨ Key Features
+
+### 🔹 1. Multi-Tool Integration
+
+A centralized platform that provides multiple utility tools, eliminating the need for separate applications.
+
+### 🔹 2. Responsive & Accessible Design
+
+Fully responsive across mobile, tablet, and desktop devices with a clean and accessible UI.
+
+### 🔹 3. Efficient State Management
+
+Optimized React state handling for smooth user interactions and improved performance.
+
+---
+
+## 🧩 Architecture & Approach
+
+* Component-based structure using React
+* Reusable UI components for scalability
+* Clean separation of concerns (UI, logic, data)
+* Optimized rendering for better performance
+
+---
+
+## 📈 What This Project Demonstrates
+
+* Strong understanding of modern frontend development
+* Ability to build real-world, user-centric applications
+* Clean coding practices and maintainable structure
+* Experience with deployment and production-ready apps
+
+---
+
+## 📷 Screenshots
+
+<img width="1391" height="913" alt="image" src="https://github.com/user-attachments/assets/dda1433e-4cd3-45b6-a248-715d332eee8f" />
+
+
+---
